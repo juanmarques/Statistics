@@ -4,6 +4,8 @@ import java.util.Comparator;
 import java.util.Date;
 import java.util.concurrent.atomic.AtomicLong;
 
+import io.swagger.annotations.ApiModelProperty;
+
 /**
  * Created by JuanM on 05/12/2018.
  */
@@ -11,6 +13,7 @@ import java.util.concurrent.atomic.AtomicLong;
 public final class Transaction implements Comparable<Transaction>, Comparator<Transaction> {
 
 	final static AtomicLong NEXT_ID = new AtomicLong(1);
+	@ApiModelProperty(hidden = true )
 	private final long id = NEXT_ID.getAndIncrement();
 
 	private final long timestamp;
@@ -62,7 +65,7 @@ public final class Transaction implements Comparable<Transaction>, Comparator<Tr
 
 	@Override
 	public String toString() {
-		return "Transaction{" + "id=" + id + ", timestamp=" + timestamp + ", amount=" + amount + '}';
+		return "Transaction{" + "timestamp=" + timestamp + ", amount=" + amount + '}';
 	}
 
 	@Override

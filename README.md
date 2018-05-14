@@ -11,7 +11,7 @@ mvn clean install
 ## How to Run the Project
 
 ```
-java -jar target/N26-Metrics-1.0.1-SNAPSHOT.jar
+java -jar target/N26-statistics-1.0.1-SNAPSHOT.jar
 ```
 
 ## Tasks
@@ -51,3 +51,5 @@ java -jar target/N26-Metrics-1.0.1-SNAPSHOT.jar
     * max is double value (highest transaction value)
     * min is double value (lowest transaction value)
     * count is long value (number of transactions)
+    
+    You can use Swagger http://localhost:8080/swagger-ui.html#/N26

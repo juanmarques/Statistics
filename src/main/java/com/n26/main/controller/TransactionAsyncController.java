@@ -19,11 +19,14 @@ import com.n26.main.domain.Transaction;
 import com.n26.main.service.TransactionCreationAsyncService;
 import com.n26.main.service.TransactionStatisticsAsyncService;
 
+import io.swagger.annotations.Api;
+
 /**
  * Created by JuanM on 05/12/2018.
  */
 
 @RestController
+@Api(tags = { "N26" })
 public class TransactionAsyncController {
 
 	@Autowired
@@ -39,7 +42,7 @@ public class TransactionAsyncController {
 	 */
 	@RequestMapping(value = "/transactions", method = RequestMethod.POST)
 	@ResponseBody
-	public void getTransactions(@RequestBody Transaction transaction, HttpServletResponse response) {
+	public void postTransactions(@RequestBody Transaction transaction, HttpServletResponse response) {
 
 		// Check if older than 60 seconds
 		boolean validateStatus = transactionCreationAsyncService.validateTrans(transaction);
