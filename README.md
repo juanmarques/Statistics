@@ -1,5 +1,3 @@
-# N26 - Code Challenge
-
 The main use case for our API is to calculate realtime statistic from the last 60 seconds
 
 
