@@ -69,9 +69,8 @@ public class TransactionAsyncController {
 	 */
 	@RequestMapping(value = "/statistics", method = RequestMethod.GET)
 	public CompletableFuture<?> getTransactionsSummary() throws InterruptedException, ExecutionException {
-		CompletableFuture<?> statisticsResponseEntity = trasactionAsyncService.getTransactionSummary()
+		return trasactionAsyncService.getTransactionSummary()
 				.thenApply(statistics -> new ResponseEntity<Statistics>(statistics, HttpStatus.OK));
-		return statisticsResponseEntity;
 	}
 
 }

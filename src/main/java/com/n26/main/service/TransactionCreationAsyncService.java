@@ -5,7 +5,6 @@ import java.util.Date;
 import java.util.DoubleSummaryStatistics;
 import java.util.stream.Collectors;
 
-import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 import com.n26.main.domain.Statistics;
@@ -25,7 +24,6 @@ public class TransactionCreationAsyncService {
 	 * @param transaction
 	 * @return
 	 */
-	@Async
 	public void saveTransaction(Transaction transaction) {
 
 		try {

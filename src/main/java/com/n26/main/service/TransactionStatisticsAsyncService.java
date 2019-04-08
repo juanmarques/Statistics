@@ -5,7 +5,6 @@ import java.util.concurrent.CompletableFuture;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.task.TaskExecutor;
-import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 import com.n26.main.domain.Statistics;
@@ -27,7 +26,6 @@ public class TransactionStatisticsAsyncService {
 	 * 
 	 * @return statistics
 	 */
-	@Async
 	public CompletableFuture<Statistics> getTransactionSummary() {
 
 		return CompletableFuture.supplyAsync(() -> {
